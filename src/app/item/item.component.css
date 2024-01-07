@@ -1,0 +1,20 @@
+mat-toolbar {
+    background-color: #141414 ;
+    color: white;
+    letter-spacing: 7px;
+    display: flex;
+    justify-content: center;
+
+}
+.delete{
+    background-color: #F44A3E;
+    margin-left: 5px;
+}
+.edit{
+    margin-left: 10px;
+    background-color:rgb(147, 149, 147) ;
+}
+.adicionar{
+    margin-left: 10px;
+    background-color:#c0c0c0 ; 
+}

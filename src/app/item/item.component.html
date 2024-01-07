@@ -1,0 +1,36 @@
+<!-- Seu componente Angular Material -->
+<mat-toolbar>NEOSTORE</mat-toolbar><br>
+<button class="adicionar" mat-button (click)="abrirModal()">+ Adicionar Fornecedor</button>
+<mat-table [dataSource]="dataSource" matSort >
+    <!-- Defina as colunas da tabela aqui -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{ item.name }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{ item.email }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef> Descrição </mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{ item.description }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="cnpj">
+        <mat-header-cell *matHeaderCellDef> CNPJ </mat-header-cell>
+        <mat-cell *matCellDef="let item">
+            {{ item.cnpj }}
+            <button class="edit" mat-button (click)="abrirModal(item.id)">Editar</button>
+            <button class="delete" mat-button (click)="deleteFornecedor(item.id)">Excluir</button>
+          </mat-cell>
+    </ng-container>
+    <!-- Adicione mais colunas conforme necessário -->
+    
+    <mat-header-row *matHeaderRowDef="colunas"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: colunas;"></mat-row>
+</mat-table>
+  
+<!-- Paginator -->
+<mat-paginator [pageSizeOptions]="[5, 10, 20, 100]" (page)="handlePageChange($event)"></mat-paginator>
+
+
+

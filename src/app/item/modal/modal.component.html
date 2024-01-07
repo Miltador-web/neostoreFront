@@ -1,0 +1,13 @@
+<h1>Editar Informações</h1>
+<mat-form-field appearance="fill">
+    Fornecedor
+    <input matInput placeholder="Fornecedor" type="text" [(ngModel)]="data.name" />
+    E-mail
+    <input matInput placeholder="E-mail" type="email" [(ngModel)]="data.email" />
+    Descrição
+    <input matInput placeholder="Descrição" type="text" [(ngModel)]="data.description" />
+    CNPJ
+    <input matInput placeholder="CNPJ" type="text" [(ngModel)]="data.cnpj" />
+    <button class="save" type="submit" (click)="editarDados(data)" mat-button >Salvar</button>
+    <button class="cancel" mat-button (click)="fecharModal()">Cancelar</button>
+</mat-form-field>
