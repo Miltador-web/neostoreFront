@@ -25,6 +25,7 @@ Este frontend consome a API disponível em: `http://127.0.0.1:8045/fornecedores`
 ### Pré-Requisitos
 - Node.js
 - Angular CLI
+- Angular/material
 
 ### Instalação
 1. Clone o repositório do projeto.
